@@ -1,7 +1,14 @@
-import '../styles/globals.css'
+import Theme from "../components/Theme";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+    return (
+        <>
+            <Theme>
+                <Component {...pageProps} />
+            </Theme>
+        </>
+    );
 }
 
-export default MyApp
+export default MyApp;
