@@ -9,5 +9,6 @@ li {
 }
 
 body {
-    background: #D3CEDF;
+    background: #d3cedf;
+    overflow: hidden;
 }
