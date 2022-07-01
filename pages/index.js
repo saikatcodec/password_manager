@@ -21,7 +21,9 @@ export default function Home() {
                         </span>
                         PManager
                     </h2>
-                    <p></p>
+                    <p className={styles.heading_text}>
+                        Fast and Secure Password Manager
+                    </p>
                 </div>
             </div>
         </>
