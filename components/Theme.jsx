@@ -106,7 +106,7 @@ function Theme({ children }) {
                         </p>
                     </div>
                 </div>
-                <div className={styles.right}></div>
+                <div className={styles.right}>{children}</div>
             </div>
         </>
     );
