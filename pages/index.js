@@ -25,6 +25,19 @@ export default function Home() {
                         Fast and Secure Password Manager
                     </p>
                 </div>
+                <div className={styles.section}>
+                    <div className={styles.left}>
+                        <h2 className={styles.title}>
+                            How Important Password Is?
+                        </h2>
+                        <h4 className={styles.subtitle}>Need to Store?</h4>
+                        <br />
+                        <p className={styles.text}>
+                            {`Don't worried. We have a solution, just remember one password to access all password.`}
+                        </p>
+                    </div>
+                    <div className={styles.right}>login</div>
+                </div>
             </div>
         </>
     );
