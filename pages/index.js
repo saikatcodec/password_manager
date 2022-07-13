@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { BsFillShieldLockFill } from "react-icons/bs";
+import Login from "../components/Login";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -36,7 +37,9 @@ export default function Home() {
                             {`Don't worried. We have a solution, just remember one password to access all password.`}
                         </p>
                     </div>
-                    <div className={styles.right}>login</div>
+                    <div className={styles.right}>
+                        <Login />
+                    </div>
                 </div>
             </div>
         </>
