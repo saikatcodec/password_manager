@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { BsFillShieldLockFill } from "react-icons/bs";
@@ -7,6 +7,8 @@ import { IoDocumentLock, IoSettings } from "react-icons/io5";
 import styles from "../styles/Theme.module.css";
 
 function Theme({ children }) {
+    const [page, setPage] = useState("Home");
+
     return (
         <>
             <div className={styles.container}>
@@ -44,13 +46,17 @@ function Theme({ children }) {
                                         <div
                                             className={[
                                                 styles.item_div,
-                                                styles.active_item_div,
+                                                page === "Home"
+                                                    ? styles.active_item_div
+                                                    : "",
                                             ].join(" ")}
                                         >
                                             <span
                                                 className={[
                                                     styles.item_logo,
-                                                    styles.active_item_logo,
+                                                    page === "Home"
+                                                        ? styles.active_item_logo
+                                                        : "",
                                                 ].join(" ")}
                                             >
                                                 <FaHome />
@@ -61,7 +67,7 @@ function Theme({ children }) {
                                 </Link>
                             </li>
                             <li className={styles.item}>
-                                <Link href={"/"}>
+                                <Link href={"/password"}>
                                     <a>
                                         <div className={styles.item_div}>
                                             <span className={styles.item_logo}>
@@ -73,7 +79,7 @@ function Theme({ children }) {
                                 </Link>
                             </li>
                             <li className={styles.item}>
-                                <Link href={"/"}>
+                                <Link href={"/about"}>
                                     <a>
                                         <div className={styles.item_div}>
                                             <span className={styles.item_logo}>
@@ -85,7 +91,7 @@ function Theme({ children }) {
                                 </Link>
                             </li>
                             <li className={styles.item}>
-                                <Link href={"/"}>
+                                <Link href={"/settings"}>
                                     <a>
                                         <div className={styles.item_div}>
                                             <span className={styles.item_logo}>
