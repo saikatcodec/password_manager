@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
 
 function About() {
+    useEffect(() => {
+        window.localStorage.setItem("page", "About");
+    });
     return (
         <>
             <Head>

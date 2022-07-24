@@ -1,9 +1,14 @@
+import { useEffect } from "react";
 import Head from "next/head";
 import { BsFillShieldLockFill } from "react-icons/bs";
 import Login from "../components/Login";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
+    useEffect(() => {
+        window.localStorage.setItem("page", "Home");
+    });
+
     return (
         <>
             <Head>

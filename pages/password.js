@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
 
 function ShowPassword() {
+    useEffect(() => {
+        window.localStorage.setItem("page", "Password");
+    });
     return (
         <>
             <Head>

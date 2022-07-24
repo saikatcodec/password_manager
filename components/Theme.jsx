@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { BsFillShieldLockFill } from "react-icons/bs";
@@ -7,7 +7,10 @@ import { IoDocumentLock, IoSettings } from "react-icons/io5";
 import styles from "../styles/Theme.module.css";
 
 function Theme({ children }) {
-    const [page, setPage] = useState("Home");
+    const [page, setPage] = useState("");
+    useEffect(() => {
+        (() => setPage(window.localStorage.getItem("page")))();
+    });
 
     return (
         <>
@@ -69,8 +72,22 @@ function Theme({ children }) {
                             <li className={styles.item}>
                                 <Link href={"/password"}>
                                     <a>
-                                        <div className={styles.item_div}>
-                                            <span className={styles.item_logo}>
+                                        <div
+                                            className={[
+                                                styles.item_div,
+                                                page === "Password"
+                                                    ? styles.active_item_div
+                                                    : "",
+                                            ].join(" ")}
+                                        >
+                                            <span
+                                                className={[
+                                                    styles.item_logo,
+                                                    page === "Password"
+                                                        ? styles.active_item_logo
+                                                        : "",
+                                                ].join(" ")}
+                                            >
                                                 <IoDocumentLock />
                                             </span>
                                             Password
@@ -81,8 +98,22 @@ function Theme({ children }) {
                             <li className={styles.item}>
                                 <Link href={"/about"}>
                                     <a>
-                                        <div className={styles.item_div}>
-                                            <span className={styles.item_logo}>
+                                        <div
+                                            className={[
+                                                styles.item_div,
+                                                page === "About"
+                                                    ? styles.active_item_div
+                                                    : "",
+                                            ].join(" ")}
+                                        >
+                                            <span
+                                                className={[
+                                                    styles.item_logo,
+                                                    page === "About"
+                                                        ? styles.active_item_logo
+                                                        : "",
+                                                ].join(" ")}
+                                            >
                                                 <FaInfoCircle />
                                             </span>
                                             About
@@ -93,8 +124,22 @@ function Theme({ children }) {
                             <li className={styles.item}>
                                 <Link href={"/settings"}>
                                     <a>
-                                        <div className={styles.item_div}>
-                                            <span className={styles.item_logo}>
+                                        <div
+                                            className={[
+                                                styles.item_div,
+                                                page === "Settings"
+                                                    ? styles.active_item_div
+                                                    : "",
+                                            ].join(" ")}
+                                        >
+                                            <span
+                                                className={[
+                                                    styles.item_logo,
+                                                    page === "Settings"
+                                                        ? styles.active_item_logo
+                                                        : "",
+                                                ].join(" ")}
+                                            >
                                                 <IoSettings />
                                             </span>
                                             Settings
