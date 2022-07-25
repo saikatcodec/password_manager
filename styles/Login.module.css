@@ -49,3 +49,42 @@
 .password:focus {
     border-bottom: 2px solid #e8630a;
 }
+
+.submit_btn {
+    background: transparent;
+    outline: none;
+    border: 1px solid #e8630a;
+    color: #e8630a;
+    border-radius: 4px;
+    padding: 0.3rem 0;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.submit_btn:hover {
+    transform: scale(1.02);
+}
+
+.forget a {
+    color: #e8630a;
+    text-decoration: none;
+}
+
+.forget a:hover {
+    color: #a10035;
+}
+
+.another_login {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.another_login a {
+    color: #e8630a;
+    font-size: 2rem;
+}
+
+.another_login a:hover {
+    color: #a10035;
+}

@@ -34,21 +34,27 @@ function Login() {
                 </Link>
             </div>
             <div className={styles.another_login}>
-                <Link href={"/"}>
-                    <a>
-                        <FaGoogle />
-                    </a>
-                </Link>
-                <Link href={"/"}>
-                    <a>
-                        <FaFacebook />
-                    </a>
-                </Link>
-                <Link href={"/"}>
-                    <a>
-                        <FaApple />
-                    </a>
-                </Link>
+                <div className={styles.item_1}>
+                    <Link href={"/"}>
+                        <a>
+                            <FaGoogle />
+                        </a>
+                    </Link>
+                </div>
+                <div className={styles.item_2}>
+                    <Link href={"/"}>
+                        <a>
+                            <FaFacebook />
+                        </a>
+                    </Link>
+                </div>
+                <div className={styles.item_3}>
+                    <Link href={"/"}>
+                        <a>
+                            <FaApple />
+                        </a>
+                    </Link>
+                </div>
             </div>
         </div>
     );
